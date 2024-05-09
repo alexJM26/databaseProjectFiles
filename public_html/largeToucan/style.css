@@ -1,0 +1,865 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: "IBM Plex Sans";
+	text-align: center;
+	box-sizing: border-box;
+}
+
+main {
+	height: 100%;
+	width: 100%;
+}
+
+h4 {
+	font-size: 14pt;
+}
+
+h3 {
+	font-size: 18pt;
+}
+
+
+:root {
+	--orange: #E96F0C;
+	--white: #EADDC4;
+	--black: #67667A;
+	--blue: #16A1C5;
+	--red: #CC5A68;
+	--green: #96CC5A;
+	--greenDown: #46B557;
+	--orangeDown: #F2AA60;
+	--greenDownDown : #118C42;
+  }
+
+  s {
+	color: var(--red);
+  }
+  
+
+/*nav bar ---------------------------------------------------------------------------------------------------------------------------*/
+
+
+#navBar {
+	height: 60px;
+	width: 100%;
+	padding: 5px 10px 5px 10px;
+	background-color: white;
+	border-bottom: 2px solid var(--orange);
+	position: sticky;
+	font-weight: 500;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	top: 0;
+}
+
+#navBar > div > a {
+	color: black;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+#navBar > div > a:hover {
+	background-color: var(--green);
+}
+
+#navBar > div > a:active {
+	background-color: var(--greenDown);
+	color: white;
+}
+
+#navLogo {
+	height: 37px;
+}
+
+#searchBar {
+	width: 40%;
+	background-color: var(--white);
+	height: 40px;
+	display: block;
+	align-items: center;
+	justify-content: flex-start;
+	border-radius: 50px;
+	outline: 2px solid var(--black);
+}
+
+#searchBar:focus-within {
+	outline: 2px solid var(--blue);
+}
+
+#searchBar > * {
+	display: flex;
+	margin-top: 10px;
+}
+
+#searchSubmit {
+	display: none;
+}
+
+#searchImg {
+	height: 20px;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+
+#searchText {
+	display: flex;
+	text-align:left;
+	padding: 0px;
+	width: 100%;
+	margin-right: 5%;
+	outline: none;
+	border: none;
+	background-color: var(--white);
+	font-size: 12pt;
+}
+
+
+
+#pfp {
+	margin-left: 5px;
+	height: 40px;
+	width: 40px;
+	border-radius: 100%;
+	border: 1px black solid;
+}
+
+#toNest {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+#nestDrop { /*https://www.w3schools.com/howto/howto_css_dropdown.asp thank you*/
+	display: none;
+	position: absolute;
+	padding-top: 140px;
+	border-radius: 2px;
+	background-color: var(--white);
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: -1;
+}
+
+#nestDrop a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+#nestDrop a:hover {
+	background-color: var(--green);
+}
+  
+#toNest:hover #nestDrop {
+	display: block;
+} /*does the hovering*/
+
+#nestDrop a:active {background-color: var(--greenDown);
+	color: white;
+}
+
+/*department navigation bar ---------------------------------------------------------------------------------------------------------------------------*/
+
+#deptNav {
+	height: 40px;
+	width: 100%;
+	padding: 5px 10px 5px 10px;
+	background-color: var(--orange);
+	font-weight: 500;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	font-weight: bold;
+	color: white;
+}
+
+#deptNav > div > a {
+	padding: 5px 10px 5px 10px;
+	color: white;
+	text-decoration: none;
+}
+
+#deptNav > div > a:hover {
+	background-color: var(--orangeDown);
+	padding: 5px 10px 5px 10px;
+	border-radius: 10px;
+	color: black;
+}
+
+#deptNav > div > a:active {
+	color: var(--black);
+}
+
+/*splash section ------------------------------------------------------i dont think this is even technically a splash whatever*/
+
+#splash {
+	height: 400px;
+	background-image: url(img/hateExtended.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-size: cover 100%; /*this could be fixed if i did a viewport. i do not want to do a viewport.*/
+}
+
+#splashGradient {
+	background-image: linear-gradient(105deg, white 45%, #ff000000 60%);
+	display: flex;
+	width: 100%;
+	padding: 0px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+#splashContent {
+	padding-left: 10%;
+	font-size: 40px;
+	max-width: 50%;
+	font-weight: 500;
+}
+
+#splashContent > a {
+	background-color: var(--green);
+	border: none;
+	padding: 5px 15px 5px 15px;
+	border-radius: 15px;
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+#splashContent > a:active {
+	background-color: var(--greenDown);
+	color: white;
+}
+#splashContent > a:hover {
+	background-color: var(--greenDown);
+}
+
+
+/*deals ---------------------------------------------------------------*/
+
+#deals {
+	background-color: var(--white);
+	border-top: 1px solid var(--black);
+	text-justify: center;
+	padding-bottom: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+#dailyDealsHeader {
+	font-size: 40px;
+	font-weight: bold;
+	padding: 20px;
+	width: 100%;
+	padding-left: 100px;
+}
+
+#dailyDealsHeader > div {
+	text-align: left;
+}
+
+#dealsViewAll {
+	font-size: 22px;
+	font-weight: 400;
+}
+
+#dealsViewAll > a {
+	color: var(--blue);
+}
+
+#dealsViewAll > a:hover {
+	color: var(--black);
+}
+
+#dealsViewAll > a:active {
+	color: black;
+}
+
+#dealsSeperator {
+	width: 90%;
+	margin: auto;
+	border: 1px solid black;
+}
+
+#dealsContainer {
+	display: flex;
+	margin:  30px 10px;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.dealBox {
+	background-color: white;
+	height: 200px;
+	width: 175px;
+	border-radius: 15px;
+	padding-top: 15px;
+	margin: 10px;
+	border: 3px solid var(--green);
+}
+
+.dealBox > * {
+	color: black;
+	text-decoration: none;
+}
+
+.dealBox:hover {
+	border: 3px solid var(--greenDown);
+}
+
+.dealBox:active {
+	border: 3px solid var(--greenDownDown);
+}
+
+.dealBox > hr {
+	margin: 0px 10px 0px 10px;
+}
+
+.dealPic > img {
+	height: 100px;
+	width: 175px;
+	object-fit: contain;
+}
+
+.dealPrice {
+	font-size: 20px;
+}
+
+.dealPrice > s {
+	font-size: 16px;
+}
+/*bottom of page nonsense ---------------------------------------------*/
+
+
+footer {
+	padding-top: 30px;
+	border-top: 2px solid var(--orange)
+
+}
+
+.socials {
+	width: 50px;
+	height: 50px;
+}
+
+#socials {
+	flex-wrap: wrap;
+	display: flex;
+	max-width: 150px;
+	padding: 5px;
+	gap: 3px;
+}
+
+#socials > div > a > img { /*i deserve to die for this*/
+	filter: invert(77%) sepia(25%) saturate(768%) hue-rotate(45deg) brightness(91%) contrast(95%);
+}
+
+#socials > div > a > img:hover {
+	filter: invert(84%) sepia(8%) saturate(5876%) hue-rotate(67deg) brightness(85%) contrast(60%);
+}
+
+#socials > div > a > img:active {
+	filter: invert(35%) sepia(96%) saturate(389%) hue-rotate(91deg) brightness(100%) contrast(98%);
+}
+
+#links {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	align-items: center;
+}
+
+#contactHR {
+	width: 80%;
+	margin: 5px auto;
+	border: 2px solid var(--orange);
+	border-radius: 5px;
+}
+
+#mailing {
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+#mailingList {
+	text-align: left;
+	height: 100%;
+	padding: 3px 5px;
+	border: var(--orange) solid 1px;
+	font-weight: 300;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#mailingList:focus {
+	outline: none;
+	border: #C03500 solid 1px;
+}
+
+#mailingListSubmit {
+	border: 0px;
+	height: 100%;
+	padding: 0px 5px 0px 5px;
+	background-color: var(--orange);
+	color: white;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#mailingListSubmit:hover {
+	background-color: var(--orangeDown);
+	color: black;
+}
+
+#mailingListSubmit:active {
+	color: var(--black);
+}
+
+#mailForm {
+	height: 30px;
+	margin-top: 10px;
+}
+
+/*search page --------------------------------------------------------*/
+
+#searchHeader {
+	margin-top: 15px;
+	text-align: left;
+	padding: 10px 10px 10px 20px;
+	font-weight: 700;
+	font-size: 20pt;
+}
+
+#searchWrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+
+/*filters -----------------------------------------------------------------------------------*/
+#filters > form {
+	width: 25%;
+}
+
+#filters { /*in a perfect world this would be sticky*/
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	padding: 15px;
+	width: 100%;
+	max-width: 300px;
+}
+
+#filters > div > div {
+	padding-left: 30px;
+	text-align: left;
+	font-weight: 500;
+	margin: 3px 0px 3px 0px;
+}
+
+#filters > div > div:hover {
+	background-color: var(--orangeDown);
+}
+
+#activeFilters:hover, #activeFilters:active, #filterPriceContainer {
+	background-color: white;
+	color: black;
+}
+
+.activeFilters {
+	margin: 3px;
+}
+
+#filters > div > div:active {
+	background-color: var(--orange);
+	color: white;
+}
+
+#filters > div, #filters > div > h4, #filters > div > h3 {
+	text-align: left;
+}
+
+#activeFilters, #activeFilers > div, #activeFilters > div > div { /*maybe flexbox was a mistake*/
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+#filterPriceContainer {
+	display: flex;
+	gap: 5px;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-items: center;	
+}
+
+#filterPriceContainer > * {
+	width: 30%;
+	max-width: 50px;
+	min-width: 40px;
+	border-radius: 5px;
+	border: 1px solid var(--black);
+}
+
+#filterPriceSubmit {
+	background-color: var(--green);
+	padding: 1px 0px 1px 0px;
+	border: none;
+	width: 0px
+}
+
+#filterPriceSubmit:hover {
+	background-color: var(--greenDown);
+}
+
+#filterPriceSubmit:active {
+	background-color: var(--greenDownDown);
+	color: white;
+}
+
+
+#activeFilters > div:active {
+	background-color: var(--greenDown);
+	color: white;
+}
+
+#activeFilters > div {
+	background-color: var(--green);
+	border-radius: 10px;
+	padding: 5px 10px 5px 10px;
+	align-items: center;
+}
+
+#activeFilters > div > div { /*i do not deserve to graduate maybe*/
+	align-items: center;
+	gap: 5px;
+}
+
+
+.customFilterPriceIn:focus {
+	outline: 2px solid var(--blue);
+	border: 1px solid var(--blue) !important;
+}
+
+#filters > hr {
+	margin: 10px 10px 10px 10px;
+	border: 1px solid var(--green);
+}
+
+#activeFilters > div > div > img {
+	width: 10px;
+}
+
+#activeFilters > div > div > img:hover {
+	filter: invert(54%) sepia(19%) saturate(6222%) hue-rotate(156deg) brightness(92%) contrast(83%);
+}
+
+#activeFilters > div > div > img:active {
+	filter: invert(98%) sepia(98%) saturate(6%) hue-rotate(136deg) brightness(102%) contrast(104%);
+}
+
+/*results ------------------------------------------------------------------------------------*/
+
+#resultContainer {
+	width: 75%;
+}
+
+#results {
+	display: flex;
+	margin:  30px 10px;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.resultBox {
+	background-color: white;
+	height: 210px;
+	width: 180px;
+	border-radius: 15px;
+	margin: 10px;
+	border-radius: 15px;
+	border: 3px solid var(--green);
+	padding: 15px;
+}
+
+.resultBox:hover {
+	border: 3px solid var(--greenDown);
+}
+
+.resultBox:active {
+	border: 3px solid var(--greenDownDown);
+}
+
+.resultName {
+	text-align: left;
+	font-weight: 600;
+	font-size: 16pt;
+	min-height: 20%;
+	max-height: 30%; /*i'm not happy about it either. i didn't know about iceberg lettuce i'm SORRY*/
+}
+
+.resultLocation {
+	text-align: left;
+	color: var(--black);
+	margin-bottom: 5px;
+	height: 15%;
+}
+
+.resultPrice > s {
+	font-size: 14pt;
+}
+
+.resultPrice {
+	font-size: 20pt;
+	height: 35%;
+	display: flex;
+	flex-direction: column;
+}
+
+.resultStock {
+	margin-top: 5px;
+	height: 15%;
+	font-size: 14pt;
+}
+
+.resultLimited {
+	color: var(--black);
+	font-weight: 500;
+	font-size: 12pt;
+}
+
+/*login page---------------------------------------------------------------------------------------------------------*/
+
+#loginWrapper {
+	margin: 0px auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border-radius: 15px; /*it's pretty funny i never picked a consistent number*/
+	border: 3px solid var(--black);
+	padding: 10px;
+	width: 500px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 10px;
+}
+
+#loginHR {
+	margin: 0px 30px;
+	border: 2px solid var(--green);
+	border-radius: 30px;
+}
+
+#loginWrapperOverflow {
+	width: 100%;
+}
+
+#loginInput {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.loginRow {
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+	margin: 5px 0px;
+}
+
+.loginIn {
+	text-align: left;
+	padding: 5px;
+	border: 2px solid var(--orange);
+	border-radius: 10px;
+}
+
+#loginButton {
+	background-color: var(--green);
+	padding: 5px 10px;
+	border: none;
+	margin-top: 5px;
+	border-radius: 10px;
+	font-weight: 500px;
+}
+
+#loginButton:hover {
+	background-color: var(--greenDown);
+}
+
+#loginButton:active {
+	background-color: var(--greenDown);
+	color: white;
+}
+
+/*user page---------------------------------------------------------------------------------------------------------*/
+
+#profileWrapper {
+	margin: 0px auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border-radius: 15px; /*it's pretty funny i never picked a consistent number*/
+	border: 3px solid var(--black);
+	padding: 10px;
+	width: 500px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 10px;
+}
+
+.profileHR {
+	margin: 0px 30px;
+	border: 2px solid var(--green);
+	border-radius: 30px;
+}
+
+#userInfoWrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 10px;
+	margin: 0% 10%;
+}
+
+.userInfoHeader {
+	font-weight: 500;
+	font-size: 20px;
+}
+
+#userLine {
+	border: 2px solid var(--orange);
+	border-radius: 10px;
+}
+
+.userRow {
+	text-align: left;
+	padding-left: 10px;
+	font-weight: 400;
+	
+}
+
+#logoutButton {
+	background-color: var(--green);
+	padding: 5px 10px;
+	border: none;
+	margin-top: 5px;
+	border-radius: 10px;
+}
+
+#logoutButton:hover {
+	background-color: var(--greenDown);
+}
+
+#logoutButton:active {
+	background-color: var(--greenDown);
+	color: white;
+}
+
+.userInfoHR {
+	border: 0.25px solid var(--orange);
+	margin: 5px 30px;
+}
+
+#coinBalance {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+/*review---------------------------------------------------------------------------------------------------------------*/
+
+.reviewBox {
+	z-index: 1;
+	background-color: white;
+	font-size: 16pt;
+	color: var(--black);
+	padding: 15px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -250px;
+	margin-top: -250px;
+	width: 500px;
+	height: 500px;
+	border-radius: 15px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6); /*i wanted to get a background filter working but it was not happening*/
+	visibility: hidden;
+	opacity: 0%;
+	transition: opacity ease-in;
+	transition-duration: 0.2s; /*not perfect... oh well*/
+	border: 3px solid var(--black);
+}
+
+.reviewHeader {
+	padding: 15px;
+	color: black;
+}
+.reviewName {
+	font-size: 30px;
+	font-weight: 600;
+	text-align: left;
+}
+
+.reviewDate {
+	color: var(--black);
+	text-align: left;
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 5px;
+}
+
+.reviewHR {
+	border: 1.5px solid var(--orange);
+	border-radius: 15px;
+	margin: 0px 20px 0px 20px;
+}
+
+star { /*this might be against the law to do but it made me feel clever*/
+	color: var(--green);
+	font-size: 25px;
+}
+
+.reviewBody {
+	text-align: left;
+	padding: 15px;
+	font-size: 18px;
+	color: black;
+}
+
+/*Our Story-------------------------------------------------------------------------------*/
+
+#storyWrapper {
+    margin: 0px auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 15px; /*it's pretty funny i never picked a consistent number*/
+    border: 3px solid var(--black);
+    padding: 20px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+#storyWrapper > p {
+    text-align: left;
+}

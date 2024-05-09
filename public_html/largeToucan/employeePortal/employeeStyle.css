@@ -1,0 +1,80 @@
+body {
+    font-family: 'IBM Plex Sans';
+    font-size: 22px;
+    background-color: #F2AA60;
+}
+.button {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans';
+}
+.buttonBig {
+    background-color: #96CC5A; 
+    color: black; 
+    height: 10vh;
+    width: 60vh;
+    font-size: 21px;
+    margin: 0px 0px;
+    border-radius: 12px;
+}
+.buttonBig:hover {
+    background-color: #46B557;
+    color: black;
+    border-radius: 12px;
+}
+.buttonSmall {
+    background-color: #96CC5A; 
+    color: black; 
+    height:5vh;
+    width:25vh;
+    font-size: 16px;
+    margin: 3px 1px;
+    border-radius: 12px;
+    text-align: center; 
+}
+.buttonSmall:hover {
+    background-color: #46B557;
+    color: black;
+    border-radius: 12px;
+}
+.wrapper {
+    background-color: white;
+    text-align: center;
+    max-width: 110vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vh;
+    border-radius: 25px;
+    height: 94vh;
+}
+.errorWrapper {
+    background-color: #ffb8ad;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vh;
+    border-radius: 10px;
+    height: fit-content;
+    width: fit-content;
+    font-size: 18px;
+    border-style: solid;
+    border-color: red;
+    border-width: 2px;
+}
+.bottom {
+    position: fixed;
+    bottom: 2%;
+    left: 350px;
+    right: 350px;
+}
+.upper {
+    position: fixed;
+    top: 24%;
+    left: 350px;
+    right: 350px;
+}
